@@ -210,21 +210,15 @@ createApp({
     </div>
   `,
   setup() {
-    console.debug(questions)
-    let score = ref(0)
-    let question = ref(questions[0])  // take first question as start point
-    function handleAnswer(answer) {
+    const score = ref(0)
+    const question = ref(questions[0])  // take first question as start point
+    const handleAnswer = (answer) => {
       score.value+=answer.score
-      const nextQuestion = questions.find((q) => q.id === answer.nextId)
-      question.value = nextQuestion
+      question.value = questions.find((q) => q.id === answer.nextId)
     }
-    function textByScore(score) {
-      if (score < 0) {
-        return 'Привет, Оля!'
-      }
-      if (score < 30) {
-        return 'Скорее всего ты не Люда'
-      }
+    const textByScore = (score) => {
+      if (score < 0)  return 'Привет, Оля!'
+      if (score < 30) return 'Скорее всего ты не Люда'
       return 'Привет, милая! Только ты могла правильно ответить на все вопросы! Я люблю тебя! Ты у меня самая лучшая!'
     }
     return {
