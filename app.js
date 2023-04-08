@@ -190,8 +190,8 @@ const questions = [
   {
     id: 'center',
     text: 'Ты уже открыла свой образовательный центр?',
-    yes: { score: -4, nextId: '' },
-    no: { score: 1, nextId: '' },
+    yes: { score: -4, nextId: null },
+    no: { score: 1, nextId: null },
   },
 ]
 
