@@ -197,17 +197,17 @@ const questions = [
 
 createApp({
   template: `
-      <div v-if="question">
-        <h1>{{ question.text }}</h1>
-        <p>баллы: {{ score }}</p>
-        <button @click="handleAnswer(question.yes)">Yes</button>
-        <button @click="handleAnswer(question.no)">No</button>
-      </div>
-      <div v-else>
-        <h1>Результат:</h1>
-        <p>{{ textByScore(score) }}</p>
-        <p>баллы: {{ score }}</p>
-      </div>
+    <div v-if="question">
+      <h1>{{ question.text }}</h1>
+      <p>баллы: {{ score }}</p>
+      <button @click="handleAnswer(question.yes)">Yes</button>
+      <button @click="handleAnswer(question.no)">No</button>
+    </div>
+    <div v-else>
+      <h1>Результат:</h1>
+      <p>{{ textByScore(score) }}</p>
+      <p>баллы: {{ score }}</p>
+    </div>
   `,
   setup() {
     console.debug(questions)
