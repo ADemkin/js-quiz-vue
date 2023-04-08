@@ -1,5 +1,7 @@
-import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import * as Vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import { questions } from './questions.js'
+
+const { createApp, ref } = Vue
 
 createApp({
   template: `
