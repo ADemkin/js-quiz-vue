@@ -2,7 +2,7 @@ import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
 const questions = [
   {
-    id: '',
+    id: 'start',
     text: 'Ты сурдопедагог?',
     yes: { score: 1, nextId: 'posobia' },
     no: { score: -1, nextId: 'has-hubby' },
