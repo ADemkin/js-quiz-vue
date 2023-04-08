@@ -200,8 +200,8 @@ createApp({
     <div v-if="question">
       <h1>{{ question.text }}</h1>
       <p>баллы: {{ score }}</p>
-      <button @click="handleAnswer(question.yes)">Yes</button>
-      <button @click="handleAnswer(question.no)">No</button>
+      <button class="yes" @click="handleAnswer(question.yes)">Yes</button>
+      <button class="no" @click="handleAnswer(question.no)">No</button>
     </div>
     <div v-else>
       <h1>Результат:</h1>
