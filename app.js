@@ -1,5 +1,6 @@
 import * as Vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 import { questions } from './questions.js'
+import { answers } from './answers.js'
 
 const { createApp, ref } = Vue
 
@@ -25,9 +26,13 @@ createApp({
       question.value = questions.find((q) => q.id === answer.nextId)
     }
     const textByScore = (score) => {
-      if (score < 0)  return 'Привет, Оля!'
-      if (score < 30) return 'Скорее всего ты не Люда'
-      return 'Привет, милая! Только ты могла правильно ответить на все вопросы! Я люблю тебя! Ты у меня самая лучшая!'
+        for (const answer of [...answers].sort((a, b) => a - b)) {
+            if (answer.maxScore < score) {
+                continue
+            }
+            return answer.text
+        }
+        return 'ответ не найден'
     }
     return {
       textByScore,
