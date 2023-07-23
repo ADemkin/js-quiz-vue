@@ -1,4 +1,5 @@
-import * as Vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+// import * as Vue from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+import * as Vue from 'https://unpkg.com/petite-vue@0.2.2/dist/petite-vue.es.js'
 import { questions } from './questions.js'
 import { answers } from './answers.js'
 
