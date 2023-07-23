@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quiz</title>
+    <!-- желательно заменить на абсолютные пути для статики -->
+    <script src="questions.js"></script>
+    <script src="answers.js"></script>
+    <script src="quiz.js" defer></script>
+    <style>
+    body {
+      text-align: center;
+    }
+    h1 {
+      padding: 2em;
+    }
+    button {
+      margin: 1em;
+      border: none;
+      color: white;
+      padding: 2em 4em;
+      border-radius: 4px;
+      text-align: center;
+      display: inline-block;
+      font-size: 16px;
+    }
+    .yes {
+      background-color: #4CAF50;
+    }
+    .no {
+      background-color: #f44336;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="quiz">
+      <h1 id="title"></h1>
+      <p id="result"></p>
+      <p>баллы: <span id="score"></span></p>
+      <button id="yesButton" class="yes">Да</button>
+      <button id="noButton" class="no">Нет</button>
+    </div>
+  </body>
+</html>
