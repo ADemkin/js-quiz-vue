@@ -18,7 +18,8 @@ const hideButtons = () => {
 
 // Quiz Logic
 const findResultByScore = (score) => {
-  for (const answer of [...answers].sort((a, b) => a - b)) {
+  const sortedAnswers = [...answers].sort((a, b) => a.maxScore - b.maxScore)
+  for (const answer of sortedAnswers) {
     if (answer.maxScore < score) {
       continue
     }
