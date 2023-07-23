@@ -1,0 +1,29 @@
+{
+  "name": "js-quiz",
+  "version": "0.2.0",
+  "description": "Simple quiz page",
+  "main": "vanilla/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ADemkin/js-quiz-vue.git"
+  },
+  "keywords": [
+    "quiz"
+  ],
+  "author": "Anton Demkin <antondemkin@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ADemkin/js-quiz-vue/issues"
+  },
+  "homepage": "https://github.com/ADemkin/js-quiz-vue#readme",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^16.0.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
